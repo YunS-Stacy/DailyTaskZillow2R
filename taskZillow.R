@@ -1,9 +1,7 @@
 library('bigrquery')
-library('DBI')
 library('RSelenium')
 library('rvest')
 library('stringr')
-library('sqldf')
 library('shinyFiles')
 #Open with chrome
 rD <- rsDriver(verbose = FALSE, port = 4446L)
