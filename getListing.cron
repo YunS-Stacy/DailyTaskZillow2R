@@ -1,0 +1,7 @@
+## cronR job
+## id:   zillowListing
+## tags: zillowListing
+## desc: zillowListing
+45 19 * * * /Library/Frameworks/R.framework/Resources/bin/Rscript '/Users/Angela/Documents/myapp/scheduledR/taskZillow.R' zillowListing >> '/Users/Angela/Documents/myapp/scheduledR/taskZillow.log' 2>&1
+
+ 

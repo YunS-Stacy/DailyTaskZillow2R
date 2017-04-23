@@ -1,14 +1,324 @@
-Loading required package: methods
 Loading required package: xml2
-Loading required package: gsubfn
-Loading required package: proto
-Loading required package: RSQLite
-Error: object 'webElem' not found
-Execution halted
-Loading required package: methods
+$kind
+[1] "bigquery#dataset"
+
+$etag
+[1] "\"-AzRU5skO4l0G5c75S4R78a9UuM/MTQ5MjkxNDg5NDM5NA\""
+
+$id
+[1] "smartselect-34c02:houseListing"
+
+$selfLink
+[1] "https://www.googleapis.com/bigquery/v2/projects/smartselect-34c02/datasets/houseListing"
+
+$datasetReference
+$datasetReference$datasetId
+[1] "houseListing"
+
+$datasetReference$projectId
+[1] "smartselect-34c02"
+
+
+$access
+$access[[1]]
+$access[[1]]$role
+[1] "WRITER"
+
+$access[[1]]$specialGroup
+[1] "projectWriters"
+
+
+$access[[2]]
+$access[[2]]$role
+[1] "OWNER"
+
+$access[[2]]$specialGroup
+[1] "projectOwners"
+
+
+$access[[3]]
+$access[[3]]$role
+[1] "OWNER"
+
+$access[[3]]$userByEmail
+[1] "shiyun_stacy@yahoo.com"
+
+
+$access[[4]]
+$access[[4]]$role
+[1] "READER"
+
+$access[[4]]$specialGroup
+[1] "projectReaders"
+
+
+
+$creationTime
+[1] "1492914894394"
+
+$lastModifiedTime
+[1] "1492914894394"
+
+$location
+[1] "US"
+
+$kind
+[1] "bigquery#job"
+
+$etag
+[1] "\"-AzRU5skO4l0G5c75S4R78a9UuM/qlAON0q-IbAScn_Nckhpf7apwiA\""
+
+$id
+[1] "smartselect-34c02:job_-c3EeKdZrpy-0E9toSzjaPHQWKY"
+
+$selfLink
+[1] "https://www.googleapis.com/bigquery/v2/projects/smartselect-34c02/jobs/job_-c3EeKdZrpy-0E9toSzjaPHQWKY"
+
+$jobReference
+$jobReference$projectId
+[1] "smartselect-34c02"
+
+$jobReference$jobId
+[1] "job_-c3EeKdZrpy-0E9toSzjaPHQWKY"
+
+
+$configuration
+$configuration$load
+$configuration$load$schema
+$configuration$load$schema$fields
+$configuration$load$schema$fields[[1]]
+$configuration$load$schema$fields[[1]]$name
+[1] "address"
+
+$configuration$load$schema$fields[[1]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[2]]
+$configuration$load$schema$fields[[2]]$name
+[1] "solddate"
+
+$configuration$load$schema$fields[[2]]$type
+[1] "TIMESTAMP"
+
+
+$configuration$load$schema$fields[[3]]
+$configuration$load$schema$fields[[3]]$name
+[1] "price"
+
+$configuration$load$schema$fields[[3]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[4]]
+$configuration$load$schema$fields[[4]]$name
+[1] "unitprice"
+
+$configuration$load$schema$fields[[4]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[5]]
+$configuration$load$schema$fields[[5]]$name
+[1] "beds"
+
+$configuration$load$schema$fields[[5]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[6]]
+$configuration$load$schema$fields[[6]]$name
+[1] "baths"
+
+$configuration$load$schema$fields[[6]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[7]]
+$configuration$load$schema$fields[[7]]$name
+[1] "area"
+
+$configuration$load$schema$fields[[7]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[8]]
+$configuration$load$schema$fields[[8]]$name
+[1] "datestart"
+
+$configuration$load$schema$fields[[8]]$type
+[1] "TIMESTAMP"
+
+
+
+
+$configuration$load$destinationTable
+$configuration$load$destinationTable$projectId
+[1] "smartselect-34c02"
+
+$configuration$load$destinationTable$datasetId
+[1] "houseListing"
+
+$configuration$load$destinationTable$tableId
+[1] "zillow"
+
+
+$configuration$load$createDisposition
+[1] "CREATE_IF_NEEDED"
+
+$configuration$load$writeDisposition
+[1] "WRITE_APPEND"
+
+$configuration$load$sourceFormat
+[1] "CSV"
+
+
+
+$status
+$status$state
+[1] "RUNNING"
+
+
+$statistics
+$statistics$creationTime
+[1] "1492990977170"
+
+$statistics$startTime
+[1] "1492990977820"
+
+
+$user_email
+[1] "shiyun_stacy@yahoo.com"
+
+[1] TRUE
+$kind
+[1] "bigquery#job"
+
+$etag
+[1] "\"-AzRU5skO4l0G5c75S4R78a9UuM/d7ehmcCDtlTI5dC--tgkjWCh3e0\""
+
+$id
+[1] "smartselect-34c02:job_27qsqPRReyfc535VohtlCuHfCpM"
+
+$selfLink
+[1] "https://www.googleapis.com/bigquery/v2/projects/smartselect-34c02/jobs/job_27qsqPRReyfc535VohtlCuHfCpM"
+
+$jobReference
+$jobReference$projectId
+[1] "smartselect-34c02"
+
+$jobReference$jobId
+[1] "job_27qsqPRReyfc535VohtlCuHfCpM"
+
+
+$configuration
+$configuration$load
+$configuration$load$schema
+$configuration$load$schema$fields
+$configuration$load$schema$fields[[1]]
+$configuration$load$schema$fields[[1]]$name
+[1] "address"
+
+$configuration$load$schema$fields[[1]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[2]]
+$configuration$load$schema$fields[[2]]$name
+[1] "solddate"
+
+$configuration$load$schema$fields[[2]]$type
+[1] "TIMESTAMP"
+
+
+$configuration$load$schema$fields[[3]]
+$configuration$load$schema$fields[[3]]$name
+[1] "price"
+
+$configuration$load$schema$fields[[3]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[4]]
+$configuration$load$schema$fields[[4]]$name
+[1] "unitprice"
+
+$configuration$load$schema$fields[[4]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[5]]
+$configuration$load$schema$fields[[5]]$name
+[1] "beds"
+
+$configuration$load$schema$fields[[5]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[6]]
+$configuration$load$schema$fields[[6]]$name
+[1] "baths"
+
+$configuration$load$schema$fields[[6]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[7]]
+$configuration$load$schema$fields[[7]]$name
+[1] "area"
+
+$configuration$load$schema$fields[[7]]$type
+[1] "STRING"
+
+
+$configuration$load$schema$fields[[8]]
+$configuration$load$schema$fields[[8]]$name
+[1] "datestart"
+
+$configuration$load$schema$fields[[8]]$type
+[1] "TIMESTAMP"
+
+
+
+
+$configuration$load$destinationTable
+$configuration$load$destinationTable$projectId
+[1] "smartselect-34c02"
+
+$configuration$load$destinationTable$datasetId
+[1] "houseListing"
+
+$configuration$load$destinationTable$tableId
+[1] "zillow"
+
+
+$configuration$load$createDisposition
+[1] "CREATE_IF_NEEDED"
+
+$configuration$load$writeDisposition
+[1] "WRITE_APPEND"
+
+$configuration$load$sourceFormat
+[1] "CSV"
+
+
+
+$status
+$status$state
+[1] "RUNNING"
+
+
+$statistics
+$statistics$creationTime
+[1] "1492990980640"
+
+$statistics$startTime
+[1] "1492990981452"
+
+
+$user_email
+[1] "shiyun_stacy@yahoo.com"
+
 Loading required package: xml2
-Loading required package: gsubfn
-Loading required package: proto
-Loading required package: RSQLite
-Error: object 'webElem' not found
+Error: oauth_listener() needs an interactive environment.
 Execution halted

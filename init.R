@@ -1,4 +1,4 @@
-my_packages = c("bigrquery", "DBI", 'RSelenium','rvest','stringr')
+my_packages = c("bigrquery", "rvest", 'stringr','shinyFiles','xml2')
 
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
