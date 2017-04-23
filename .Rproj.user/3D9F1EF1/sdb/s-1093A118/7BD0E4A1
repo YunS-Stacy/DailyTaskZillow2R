@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "install.packages(\"cronR\")\nlibrary(rvest)\ndemo(package = \"rvest\")\ndemo(package = \"rvest\",topic = \"zillow\")\n\nlibrary(rvest)\nlibrary(tidyr)\n\npage <- read_html(\"http://www.zillow.com/homes/for_sale/Philadelphia-pa/fsba,fsbo,fore,cmsn_lt/house_type/52333_rid/39.638414,-86.011362,39.550714,-86.179419_rect/12_zm/0_mmm/\")\n\nhouses <- page %>%\n  html_nodes(\".photo-cards li article\")\n\nz_id <- houses %>% html_attr(\"id\")\n\naddress <- houses %>%\n  html_node(\".zsg-photo-card-address\") %>%\n  html_text()\n\nprice <- houses %>%\n  html_node(\".zsg-photo-card-price\") %>%\n  html_text() %>%\n  readr::parse_number()\n\nparams <- houses %>%\n  html_node(\".zsg-photo-card-info\") %>%\n  html_text() %>%\n  strsplit(\"\\u00b7\")\n\nbeds <- params %>% purrr::map_chr(1) %>% readr::parse_number()\nbaths <- params %>% purrr::map_chr(2) %>% readr::parse_number()\nhouse_area <- params %>% purrr::map_chr(3) %>% readr::parse_number()",
+    "created" : 1492581933568.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4147715788",
+    "id" : "7BD0E4A1",
+    "lastKnownWriteTime" : 1492582776,
+    "last_content_update" : 1492582776725,
+    "path" : "~/Downloads/twitterShiny/scheduledR/dataUpdate.R",
+    "project_path" : "dataUpdate.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}
