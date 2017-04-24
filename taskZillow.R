@@ -1,8 +1,7 @@
-library('bigrquery')
-library('rvest')
 library('stringr')
-library('shinyFiles')
 library('xml2')
+library('httr')
+library('jsonlite')
 
 html_1 <- read_html("https://www.zillow.com/homes/recently_sold/Philadelphia-PA/apartment_duplex_type/days_sort/")
 
@@ -109,24 +108,10 @@ names(latest_2)  <- c('address', 'solddate', 'price', 'unitprice', 'beds', 'bath
 
 datestart <- Sys.Date() - 30
 
-latest <- cbind(rbind(latest_1,latest_2),datestart)
+latest <- rbind(latest_1,latest_2)
 
-# upload to google query
-project <- "smartselect-34c02"
-dataset <- 'houseListing'
-table <- 'zillow'
-get_dataset(project, dataset)
+today <- latest[latest$solddate >= datestart,] %>% na.omit() %>% toJSON()
 
-#at first time, write_append to the last table
-insert_upload_job(project, dataset, table, latest, billing = project, write_disposition = "WRITE_APPEND" )
+r <- PUT(body=today, url="https://smartselect-34c02.firebaseio.com/houseListing.json")
 
-#query the latest 30 days
-sql <- 'SELECT address, solddate, price, unitprice, beds, baths, area, datestart FROM (
-          SELECT *, ROW_NUMBER() OVER (PARTITION BY address) row_number FROM houseListing.zillow)
-        WHERE row_number = 1 AND DATE(solddate) >= DATE(datestart)
-        ORDER BY solddate desc'
-today <- query_exec(sql, project, destination_table = NULL, default_dataset = dataset)
-
-#delete the last table and upload the new one
-delete_table(project,dataset,table)
-insert_upload_job(project, dataset, table, today, billing = project)
+# r$status_code === 200 check success

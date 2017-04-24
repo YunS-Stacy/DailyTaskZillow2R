@@ -1,4 +1,4 @@
-my_packages = c("bigrquery", "rvest", 'stringr','shinyFiles','xml2')
+my_packages = c("stringr", "xml2", 'httr','jsonlite')
 
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
