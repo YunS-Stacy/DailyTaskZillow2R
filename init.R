@@ -1,4 +1,4 @@
-my_packages = c("stringr", "xml2", 'httr','jsonlite')
+my_packages = c("stringr", "xml2", 'httr','jsonlite','rvest')
 
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {

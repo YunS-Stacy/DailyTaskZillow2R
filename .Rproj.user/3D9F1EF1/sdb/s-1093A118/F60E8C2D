@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "my_packages = c(\"stringr\", \"xml2\", 'httr','jsonlite')\n\ninstall_if_missing = function(p) {\n  if (p %in% rownames(installed.packages()) == FALSE) {\n    install.packages(p)\n  }\n}\n\ninvisible(sapply(my_packages, install_if_missing))",
+    "contents" : "my_packages = c(\"stringr\", \"xml2\", 'httr','jsonlite','rvest')\n\ninstall_if_missing = function(p) {\n  if (p %in% rownames(installed.packages()) == FALSE) {\n    install.packages(p)\n  }\n}\n\ninvisible(sapply(my_packages, install_if_missing))\n",
     "created" : 1493007151916.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1731072741",
+    "hash" : "3421392825",
     "id" : "F60E8C2D",
-    "lastKnownWriteTime" : 1493007200,
-    "last_content_update" : 1493007200191,
+    "lastKnownWriteTime" : 1493008278,
+    "last_content_update" : 1493008278987,
     "path" : "~/Documents/myapp/scheduledR/init.R",
     "project_path" : "init.R",
     "properties" : {

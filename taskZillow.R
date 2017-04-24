@@ -2,6 +2,7 @@ library('stringr')
 library('xml2')
 library('httr')
 library('jsonlite')
+library('rvest')
 
 html_1 <- read_html("https://www.zillow.com/homes/recently_sold/Philadelphia-PA/apartment_duplex_type/days_sort/")
 
