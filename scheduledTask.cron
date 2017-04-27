@@ -1,7 +1,0 @@
-## cronR job
-## id:   zillowListing
-## tags: zillowListing
-## desc: I zillowListing things
-0 17 * * * /Library/Frameworks/R.framework/Resources/bin/Rscript '/Users/Angela/Documents/myapp/scheduledR/taskZillow.R'  >> '/Users/Angela/Documents/myapp/scheduledR/taskZillow.log' 2>&1
-
- 
