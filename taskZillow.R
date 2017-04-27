@@ -117,8 +117,6 @@
   latest_2 <- data.frame(address_2, solddate_2, price_2, unitprice_2, beds_2, baths_2, area_2, lon_2, lat_2, row.names = NULL)
   names(latest_2)  <- c('address', 'solddate', 'price', 'unitprice', 'beds', 'baths', 'area', 'lon', 'lat')
   
-  datestart <- Sys.Date() - 30
-  
   latest <- rbind(latest_1,latest_2)
 
   today <- latest %>% na.omit() %>% toJSON()
