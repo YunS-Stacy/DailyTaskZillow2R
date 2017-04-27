@@ -116,12 +116,10 @@
     str_replace(", Philadelphia, PA",'')
   latest_2 <- data.frame(address_2, solddate_2, price_2, unitprice_2, beds_2, baths_2, area_2, lon_2, lat_2, row.names = NULL)
   names(latest_2)  <- c('address', 'solddate', 'price', 'unitprice', 'beds', 'baths', 'area', 'lon', 'lat')
-  
-  datestart <- Sys.Date() - 30
-  
+dat
   latest <- rbind(latest_1,latest_2)
 
   today <- latest %>% na.omit() %>% toJSON()
   
-  r <- PUT(body=today, url="https://smartselect-34c02.firebaseio.com/houseListing.json")
+  r <- PUT(body=today, url="https://smartselect-34c02.firebaseio.com/houseListing_test.json")
   # r$status_code === 200 check success
