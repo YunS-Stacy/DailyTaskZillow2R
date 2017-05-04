@@ -3,6 +3,7 @@ library('xml2')
 library('httr')
 library('jsonlite')
 library('rvest')
+library('cronR')
 
 html_1 <- read_html("https://www.zillow.com/homes/recently_sold/Philadelphia-PA/apartment_duplex_type/days_sort/")
 #Get Coords
@@ -121,7 +122,7 @@ latest <- rbind(latest_1,latest_2)
 
 today <- toJSON(latest)
 
-r <- PUT(body=today, url="https://smartselect-34c02.firebaseio.com/houseListing.json")
+r <- PUT(body=today, url="https://smartselect-34c02.firebaseio.com/houseListing_test.json")
 
 # r$status_code === 200 check success
 print(r$status_code)
