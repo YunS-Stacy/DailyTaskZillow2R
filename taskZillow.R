@@ -20,13 +20,13 @@ infos_1 <- html_nodes(html_1, css='.zsg-photo-card-info') %>%
 unitprice_1 <- infos_1 %>% 
   sapply(function(x){
     # unit price
-    strsplit(x,' · ')[[1]][1] %>%
+    strsplit(x, ' \u00B7 ')[[1]][1] %>%
       str_replace(fixed("Price/sqft: "), "")})
 ##beds
 beds_1 <- infos_1 %>% 
   sapply(function(x){
     # unit price
-    strsplit(x,' · ')[[1]][2] %>%
+    strsplit(x,' \u00B7 ')[[1]][2] %>%
       str_replace(fixed(" bds"), "") %>%
       str_replace(fixed(" bd"), "")
   })
@@ -35,14 +35,14 @@ beds_1 <- infos_1 %>%
 baths_1 <- infos_1 %>% 
   sapply(function(x){
     # unit price
-    strsplit(x,' · ')[[1]][3] %>%
+    strsplit(x,' \u00B7 ')[[1]][3] %>%
       str_replace(fixed(" ba"), "")
   })
 #area
 area_1 <- infos_1 %>% 
   sapply(function(x){
     # unit price
-    strsplit(x,' · ')[[1]][4] %>%
+    strsplit(x,' \u00B7 ')[[1]][4] %>%
       str_replace(fixed(" sqft"), "")
   })
 
@@ -78,13 +78,13 @@ infos_2 <- html_nodes(html_2, css='.zsg-photo-card-info') %>%
 unitprice_2 <- infos_2 %>% 
   sapply(function(x){
     # unit price
-    strsplit(x,' · ')[[1]][1] %>%
+    strsplit(x,' \u00B7 ')[[1]][1] %>%
       str_replace(fixed("Price/sqft: "), "")})
 ##beds
 beds_2 <- infos_2 %>% 
   sapply(function(x){
     # unit price
-    strsplit(x,' · ')[[1]][2] %>%
+    strsplit(x,' \u00B7 ')[[1]][2] %>%
       str_replace(fixed(" bds"), "") %>%
       str_replace(fixed(" bd"), "")
   })
@@ -93,14 +93,14 @@ beds_2 <- infos_2 %>%
 baths_2 <- infos_2 %>% 
   sapply(function(x){
     # unit price
-    strsplit(x,' · ')[[1]][3] %>%
+    strsplit(x,' \u00B7 ')[[1]][3] %>%
       str_replace(fixed(" ba"), "")
   })
 #area
 area_2 <- infos_2 %>% 
   sapply(function(x){
     # unit price
-    strsplit(x,' · ')[[1]][4] %>%
+    strsplit(x,' \u00B7 ')[[1]][4] %>%
       str_replace(fixed(" sqft"), "")
   })
 
@@ -119,7 +119,7 @@ names(latest_2)  <- c('address', 'solddate', 'price', 'unitprice', 'beds', 'bath
 
 latest <- rbind(latest_1,latest_2)
 
-today <- toJSON(latest)
+today <- toJSON(latest, dataframe = 'rows')
 
 r <- PUT(body=today, url="https://smartselect-34c02.firebaseio.com/houseListing.json")
 
